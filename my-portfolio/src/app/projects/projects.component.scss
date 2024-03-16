@@ -1,38 +1,8 @@
-/* projects.component.css */
-.p-datatable-tech {
+/* styles.css */
+
+.project-image {
     width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .p-datatable-tech th,
-  .p-datatable-tech td {
-    border: 1px solid #ccc;
-    padding: 8px;
-  }
-  
-  .p-datatable-tech th {
-    background-color: #f2f2f2;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .p-datatable-tech tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .p-datatable-tech tr:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .p-col-1 {
-    width: 20%;
-  }
-  
-  .p-col-2 {
-    width: 30%;
-  }
-  
-  .p-col-3 {
-    width: 50%;
-  }
-  
+    /* Adjust the width as needed */
+    height: 10px;
+    /* Maintain aspect ratio */
+}

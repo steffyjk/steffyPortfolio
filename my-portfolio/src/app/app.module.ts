@@ -10,8 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
-
-
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 const routes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
@@ -31,6 +31,8 @@ const routes: Routes = [
     AppRoutingModule,
     MenubarModule,
     TableModule,
+    CardModule,
+    ButtonModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
