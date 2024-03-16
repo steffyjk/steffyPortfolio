@@ -1,0 +1,34 @@
+/* footer.component.css */
+
+.footer {
+    background-color: #333;
+    /* Change the background color to your preference */
+    color: #fff;
+    /* Text color */
+    padding: 10px 0;
+    /* Add padding for spacing */
+}
+
+.container {
+    max-width: 1200px;
+    /* Limit the width of the container */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+/* Center the text */
+.footer .container {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center the text */
+    align-items: center;
+    /* Vertically center the text */
+}
+
+/* Style the copyright text */
+.footer .copyright {
+    font-size: 14px;
+    /* Adjust the font size */
+    margin: 0;
+    /* Remove default margins */
+}

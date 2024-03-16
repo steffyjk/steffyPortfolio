@@ -1,0 +1,18 @@
+<!-- projects.component.html -->
+<p-table [value]="projects" class="p-datatable-tech">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="p-col-1">Project ID</th>
+        <th class="p-col-2">Title</th>
+        <th class="p-col-3">Description</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-project>
+      <tr>
+        <td>{{ project.id }}</td>
+        <td>{{ project.title }}</td>
+        <td>{{ project.description }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  

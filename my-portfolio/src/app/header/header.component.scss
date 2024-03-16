@@ -1,0 +1,34 @@
+/* header.component.css */
+
+.header {
+    background-color: #333; /* Change the background color to your preference */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Add padding for spacing */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .logo {
+    font-size: 24px; /* Adjust the font size of the logo */
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 20px; /* Add spacing between links */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Underline links on hover */
+  }
+  

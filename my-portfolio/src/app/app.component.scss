@@ -1,0 +1,21 @@
+/* styles.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  app-footer {
+    margin-top: auto;
+  }
+  
