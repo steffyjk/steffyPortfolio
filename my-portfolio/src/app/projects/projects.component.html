@@ -1,29 +1,22 @@
-<!-- projects.component.html -->
-
-<div class="p-grid">
-    <ng-container *ngFor="let project of projects">
-        <p-card header="Title">
-            <p class="m-0">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-                quas!
-            </p>
-        </p-card>
-      <!-- <div class="p-col-12 p-md-4">
-        <p-card>
-          <ng-template pTemplate="header">
-            <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" class="project-image" />
-          </ng-template>
-          <p>
-            <strong>Project ID:</strong> {{ project.id }} <br>
-            <strong>Title:</strong> {{ project.title }} <br>
-            <strong>Description:</strong> {{ project.description }}
-          </p>
-          <ng-template pTemplate="footer">
-            <p-button label="Save" icon="pi pi-check"></p-button>
-            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
-          </ng-template>
-        </p-card>
-      </div> -->
-    </ng-container>
+<div class="grid mt-6 mb-6">
+  <div class="col m-2 surface-border border-500 hover:border-700 border-3 border-round surface-overlay" *ngFor="let project of projects">
+    <p-card header="{{ project.title }}">
+      <img src="https://via.placeholder.com/150" alt="Temporary Image" class="card-image">
+      <p class="m-0">
+        {{ project.description }}
+      </p>
+      <div>
+        <p>Backend Technologies:</p>
+        <div *ngFor="let tech of project.technologies.backend" class="chip">
+          {{ tech }}
+        </div>
+      </div>
+      <div>
+        <p>Frontend Technologies:</p>
+        <div *ngFor="let tech of project.technologies.frontend" class="chip">
+          {{ tech }}
+        </div>
+      </div>
+    </p-card>
   </div>
-  
+</div>

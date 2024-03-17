@@ -1,8 +1,12 @@
-/* styles.css */
-
-.project-image {
+.card-image {
     width: 100%;
-    /* Adjust the width as needed */
-    height: 10px;
-    /* Maintain aspect ratio */
+    height: 150px;
+}
+
+.chip {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
 }
