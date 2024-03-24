@@ -1,12 +1,13 @@
-<p-toolbar 
-    [style]="{ 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' }">
+<p-toolbar [style]="{ 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' }">
     <ng-template pTemplate="start">
         <div class="flex align-items-center gap-2">
-            <p-avatar image="https://i.pinimg.com/236x/12/99/44/1299449783f7055209ed64defcd98410.jpg" shape="circle" />
+            <!-- <p-avatar image="https://i.pinimg.com/236x/12/99/44/1299449783f7055209ed64defcd98410.jpg" shape="circle" /> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/10794/10794370.png" hape="circle" height="45" />
+
             <span class="font-bold text-bluegray-50">Steffy JK | Software Engineer</span>
         </div>
     </ng-template>
-    <ng-template pTemplate="center">
+    <ng-template pTemplate="right">
         <div class="flex flex-wrap align-items-center gap-3">
             <a routerLink="/" class="nav-link"><button pTooltip="Home" tooltipPosition="bottom"
                     class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
@@ -14,19 +15,19 @@
             <a routerLink="/about" class="nav-link"><button pTooltip="About" tooltipPosition="bottom"
                     class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
                         class="pi pi-chart-bar text-2xl"></i></button></a>
-            <a routerLink="/contact" class="nav-link"><button pTooltip="Contact" tooltipPosition="bottom"
-                    class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
-                        class="pi pi-phone text-2xl"></i></button></a>
             <a routerLink="/projects" class="nav-link"><button pTooltip="Work" tooltipPosition="bottom"
                     class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
                         class="pi pi-folder-open text-2xl"></i></button></a>
             <button pTooltip="Work" tooltipPosition="bottom"
                 class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
                     class="pi pi-briefcase text-2xl"></i></button>
+            <a routerLink="/contact" class="nav-link"><button pTooltip="Contact" tooltipPosition="bottom"
+                    class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"><i
+                        class="pi pi-phone text-2xl"></i></button></a>
 
         </div>
     </ng-template>
-    <ng-template pTemplate="end">
-        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
-    </ng-template>
+    <!-- <ng-template pTemplate="end">
+        <img src="https://cdn-icons-png.flaticon.com/128/10794/10794370.png"  height="45"/>
+    </ng-template> -->
 </p-toolbar>
