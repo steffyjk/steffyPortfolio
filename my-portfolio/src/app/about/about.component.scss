@@ -1,0 +1,12 @@
+/* Adjust organization chart layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .p-organizationChart .p-organizationchart-node-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .p-organizationChart .p-organizationchart-node-content img {
+      margin-bottom: 0.5rem; /* Adjust spacing between image and text */
+    }
+}  

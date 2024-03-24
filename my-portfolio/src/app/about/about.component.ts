@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TreeNode } from 'primeng/api';
 
 @Component({
   selector: 'app-about',
@@ -6,71 +7,62 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  products:any;
-  ngOnInit() {
-    this.products = [
-      {
-        name: "John",
-        rating: 4,
-        inventoryStatus: "INSTOCK",
-        category: "Java Developer",
-        price: 120000
-      },
-      {
-        name: "Alice",
-        rating: 3,
-        inventoryStatus: "LOWSTOCK",
-        category: "Frontend Developer",
-        price: 100000
-      },
-      {
-        name: "Bob",
-        rating: 2,
-        inventoryStatus: "OUTOFSTOCK",
-        category: "Backend Developer",
-        price: 80000
-      },
-      {
-        name: "Emma",
-        rating: 4,
-        inventoryStatus: "INSTOCK",
-        category: "Data Scientist",
-        price: 150000
-      },
-      {
-        name: "Michael",
-        rating: 5,
-        inventoryStatus: "INSTOCK",
-        category: "DevOps Engineer",
-        price: 130000
-      }
-    ];
-    
-    // this.products = [
-    //   {
-    //     name:"steffy",
-    //     rating:5,
-    //     inventoryStatus:"INSTOCK",
-    //     category:"python developer",
-    //     price:152000
-    //   },
-    // ]
-  }
+  selectedNodes!: TreeNode[];
 
-  getSeverity(product: any): string | undefined {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
-  
-      case 'LOWSTOCK':
-        return 'warning';
-  
-      case 'OUTOFSTOCK':
-        return 'danger';
-  
-      default:
-        return undefined; 
-    }
-  }
-  
+  data: TreeNode[] = [
+      {
+          expanded: true,
+          type: 'person',
+          data: {
+              image: 'https://cdn-icons-png.flaticon.com/128/2118/2118630.png',
+              name: 'Steffy JK',
+              title: 'About Me'
+          },
+          children: [
+              {
+                  expanded: true,
+                  type: 'person',
+                  data: {
+                      image: 'https://cdn-icons-png.flaticon.com/128/3976/3976555.png',
+                      name: 'Education',
+                      title: 'Education1'
+                  },
+                  children: [
+                      {
+                          label: 'Computer Engineer [ B.Tech ]',
+                          data: 'Indus University',
+                      },
+                      {
+                          label: '12th [ HSC Science ]'
+                      }
+                  ]
+              },
+              {
+                  expanded: true,
+                  type: 'person',
+                  data: {
+                      image: 'https://cdn-icons-png.flaticon.com/128/15376/15376552.png',
+                      name: 'Experience',
+                      title: 'Experience1'
+                  },
+                  children: [
+                    {
+                        type: 'person',
+                        data: {
+                            name: 'Software Developer [ Python Developer ]',
+                            title: 'Inexture Solutions LLP | 2022 - 2023'
+                        }
+                    },
+                    {
+                        type: 'person',
+                        data: {
+                            name: 'Software Engineer [ FullStack Developer ]',
+                            title: 'Ahmedabad, Gujarat | 2023 - Present'
+                        }
+                    }
+                  ]
+              }
+          ]
+      }
+  ];
 }

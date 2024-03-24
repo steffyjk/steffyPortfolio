@@ -26,6 +26,7 @@ import { ChipsModule } from 'primeng/chips';
 import { FieldsetModule } from 'primeng/fieldset';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { RippleModule } from 'primeng/ripple';
+import { OrganizationChartModule } from 'primeng/organizationchart';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -64,7 +65,8 @@ const routes: Routes = [
     ChipsModule,
     FieldsetModule,
     AnimateOnScrollModule,
-    RippleModule
+    RippleModule,
+    OrganizationChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

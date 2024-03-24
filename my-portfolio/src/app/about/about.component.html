@@ -1,0 +1,11 @@
+<div class="mt-3 mb-2">
+    <p-organizationChart [value]="data" selectionMode="multiple" [(selection)]="selectedNodes">
+        <ng-template let-node pTemplate="person">
+            <div class="p-2 text-center">
+                <img *ngIf="node.data.image" [src]="node.data.image" class="mb-3 w-3rem h-3rem" />
+                <div class="font-bold">{{ node.data.name }}</div>
+                <div>{{ node.data.title }}</div>
+            </div>
+        </ng-template>
+    </p-organizationChart>
+</div>
