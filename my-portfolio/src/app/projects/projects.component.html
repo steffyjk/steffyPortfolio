@@ -1,22 +1,27 @@
-<div class="grid mt-6 mb-6">
-  <div class="col m-2 surface-border border-500 hover:border-700 border-3 border-round surface-overlay" *ngFor="let project of projects">
-    <p-card header="{{ project.title }}">
-      <img src="https://via.placeholder.com/150" alt="Temporary Image" class="card-image">
-      <p class="m-0">
-        {{ project.description }}
-      </p>
-      <div>
-        <p>Backend Technologies:</p>
-        <div *ngFor="let tech of project.technologies.backend" class="chip">
-          {{ tech }}
-        </div>
+<div class="main-container">
+  <div class="grid bg-color">
+    <div *ngFor="let project of projects" class="col-12 md:col-6 lg:col-3">
+      <div class="p-3 border-round-sm font-bold">
+        <p-card header="{{ project.title }}">
+          <p>{{ project.description }}</p>
+          <p-fieldset legend="Technologies" class="fieldset-custom">
+            <div class="flex-container">
+                <div class="left" *ngIf="project.technologies.backend">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li *ngFor="let tech of project.technologies.backend">{{ tech }}</li>
+                    </ul>
+                </div>
+                <div class="right" *ngIf="project.technologies.frontend">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li *ngFor="let tech of project.technologies.frontend">{{ tech }}</li>
+                    </ul>
+                </div>
+            </div>
+        </p-fieldset>
+        </p-card>
       </div>
-      <div>
-        <p>Frontend Technologies:</p>
-        <div *ngFor="let tech of project.technologies.frontend" class="chip">
-          {{ tech }}
-        </div>
-      </div>
-    </p-card>
+    </div>
   </div>
 </div>
