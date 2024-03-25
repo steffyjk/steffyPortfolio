@@ -8,4 +8,23 @@
             </div>
         </ng-template>
     </p-organizationChart>
+    <div class="grid text-center mt-3 ml-3">
+        <ng-container *ngFor="let skill of skills; let i = index">
+            <div class="col">
+                <div class="card flex flex-wrap">
+                    <p-accordion [multiple]="true" [activeIndex]="activeIndex">
+                        <p-accordionTab [header]="skill.name">
+                            <p class="text-left">{{ skill.description }}</p>
+                            <div class="card flex justify-content-center gap-2">
+                                <ng-container *ngFor="let tag of skill.tags">
+                                    <p-tag icon="pi pi-check" [value]="tag"
+                                        [style]="{ 'background': '#e1e8ef', 'color': '#000000' }"></p-tag>
+                                </ng-container>
+                            </div>
+                        </p-accordionTab>
+                    </p-accordion>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>

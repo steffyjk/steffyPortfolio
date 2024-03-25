@@ -27,6 +27,9 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { RippleModule } from 'primeng/ripple';
 import { OrganizationChartModule } from 'primeng/organizationchart';
+import { SplitterModule } from 'primeng/splitter';
+import { TimelineModule } from 'primeng/timeline';
+import { ServiceComponent } from './service/service.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +47,7 @@ const routes: Routes = [
     ProjectsComponent,
     ContactComponent,
     HomeComponent,
+    ServiceComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -66,7 +70,9 @@ const routes: Routes = [
     FieldsetModule,
     AnimateOnScrollModule,
     RippleModule,
-    OrganizationChartModule
+    OrganizationChartModule,
+    SplitterModule,
+    TimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
